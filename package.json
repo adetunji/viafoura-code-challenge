@@ -1,6 +1,7 @@
 {
   "name": "viafoura-code-test",
   "version": "0.1.0",
+  "author": "Tunji Akinbami",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -8,6 +9,9 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@vue/test-utils": "^1.0.3",
+    "bootstrap": "^4.5.0",
+    "bootstrap-vue": "^2.14.0",
     "core-js": "^3.6.4",
     "vue": "^2.6.11"
   },
