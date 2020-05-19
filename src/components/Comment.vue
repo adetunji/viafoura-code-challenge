@@ -8,7 +8,7 @@
         <div>
           <Role :role="retrievedData.role" :name="retrievedData.name" :time="retrievedData.time"/>
           <CommentText :commentText="retrievedData.comment"/>
-          <ReplyBlock :upVotes="retrievedData.upVotes" :downVotes="retrievedData.downVotes"/>
+          <ReplyBlock/>
         </div>
       </div>
     </div>
@@ -26,11 +26,7 @@
   export default {
     name: 'Comment',
     components: {Avatar, Role, ReplyBlock, CommentText},
-    props: {
-      msg: String
-    },
     data() {
-      console.log(json );
       return {
         hover: false
       }
@@ -49,12 +45,9 @@
     margin-left: 500px;
   }
 
-  .comment-block:hover {
-    /*cursor: pointer;*/
-  }
   .comment-block:hover > .comment-text .reply-block {
-    /*cursor: pointer;*/
-    color: dimgrey;
+    color: #000000;
+    user-select: none;
   }
   .comment-text {
     width: 550px;

@@ -1,13 +1,13 @@
 <template>
   <div>
-   {{commentText}}
+    {{commentText}}
   </div>
 </template>
 
 <script>
   export default {
     name: "CommentText",
-    props: ['commentText']
+    props: {commentText: String}
   }
 </script>
 

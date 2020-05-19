@@ -1,4 +1,9 @@
-# viafoura-code-test
+# Viafoura code test by Tunji Akinbami
+
+## Note
+```
+Up and Down buttons should work when cliked.
+```
 
 ## Project setup
 ```
@@ -15,10 +20,12 @@ npm run serve
 npm run build
 ```
 
+### Test code
+```
+npm run test:unit
+```
+
 ### Lints and fixes files
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

@@ -1,17 +1,17 @@
 <template>
   <div class="reply-block">
-    <span style="cursor: pointer;">REPLY</span>
-    <span style="margin-left: 20px; cursor: pointer;">REPLIES</span>
-    <span style="margin-left: 20px; cursor: pointer;">
+    <span style="">REPLY</span>
+    <span style="margin-left: 20px;">REPLIES</span>
+    <span class="clicks" @click="vote('increment')">
       <BIconChevronUp/>
-      <span style="margin-left: 2px; cursor: pointer;">
-        {{upVotes}}
+      <span style="margin-left: 2px;">
+        {{upVote}}
       </span>
     </span>
-    <span style="margin-left: 20px; cursor: pointer;">
-      <BIconChevronDown/>
+    <span class="clicks" @click="vote('decrement')">
+      <BIconChevronDown />
       <span style="margin-left: 2px;">
-        {{downVotes}}
+        {{downVote}}
       </span>
     </span>
   </div>
@@ -22,16 +22,40 @@
   export default {
     name: "ReplyBlock",
     components: {BIconChevronUp, BIconChevronDown},
-    props: ['upVotes', 'downVotes']
+    props: ['upVotes', 'downVotes'],
+    data () {
+      return {
+        upVote: 0,
+        downVote: 0
+      }
+    },
+    methods : {
+      vote(action) {
+        if (action === 'increment') {
+          this.upVote += 1;
+          if (this.downVote > 0) {
+            this.downVote -= 1;
+          }
+        } else {
+          this.downVote += 1;
+          if (this.upVote > 0) {
+            this.upVote -= 1;
+          }
+        }
+      }
+    }
   }
 </script>
 
 <style scoped>
   .reply-block {
     margin-top: 10px;
-    color: darkgray;
+    color: lightgray;
     font-size: small;
   }
 
-
+  .clicks {
+    margin-left: 20px;
+    cursor: pointer;
+  }
 </style>

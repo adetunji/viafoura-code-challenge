@@ -3,10 +3,10 @@
     <div class="name">
       {{name}}
     </div>
-    <div class="badge badge-pill badge-dark" style="height: fit-content;">
+    <div class="badge badge-pill badge-dark role">
       {{role.toUpperCase()}}
     </div>
-    <div style="margin-left: 15px;  color: darkgray; font-size: small;">
+    <div class="time">
       &#8226; {{time}} minutes ago
     </div>
   </div>
@@ -27,8 +27,6 @@
   .author-container {
     display: flex;
     align-items: center;
-    /*flex-wrap: nowrap;*/
-    /*background: aqua;*/
     vertical-align: middle;
   }
   .name {
@@ -36,11 +34,12 @@
     font-weight: bolder;
     margin-right: 20px;
   }
-  .author {
-    /*flex-grow: 1;*/
-    font-weight: bolder;
-    background-color: black;
-    /*border: none;*/
-    color: white;
+  .role {
+    height: fit-content;
+  }
+  .time {
+    margin-left: 15px;
+    color: dimgrey;
+    font-size: small;
   }
 </style>

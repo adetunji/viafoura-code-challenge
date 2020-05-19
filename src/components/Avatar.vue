@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img src="../assets/logo.png" alt="Avatar" class="avatar">
+    <img src="../assets/mario.png" alt="Avatar" class="avatar">
   </div>
 </template>
 
