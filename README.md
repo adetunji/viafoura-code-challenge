@@ -2,8 +2,9 @@
 
 ## Note
 ```
-Node version 8.11.3
-Up and Down buttons should work when cliked.
+- Node version 8.11.3
+- Vue version @vue/cli 4.3.1
+- Up and Down buttons should work when cliked.
 ```
 
 ## Project setup
